@@ -4,6 +4,7 @@ export const translations = {
   nav: {
     work: { en: "Work", he: "עבודות", ru: "Работы" },
     collections: { en: "Collections", he: "אוספים", ru: "Коллекции" },
+    models: { en: "Models", he: "דוגמניות", ru: "Модели" },
     about: { en: "About", he: "אודות", ru: "Обо мне" },
     contact: { en: "Contact", he: "צור קשר", ru: "Контакты" },
   },
@@ -44,6 +45,26 @@ export const translations = {
     architecture: { en: "Architecture", he: "אדריכלות", ru: "Архитектура" },
     blackAndWhite: { en: "Black & White", he: "שחור ולבן", ru: "Чёрно-белое" },
     photos: { en: "photos", he: "תמונות", ru: "фото" },
+  },
+  models: {
+    title: { en: "Models", he: "דוגמניות", ru: "Модели" },
+    subtitle: {
+      en: "Portrait & fashion photography featuring talented models",
+      he: "צילומי פורטרט ואופנה עם דוגמניות מוכשרות",
+      ru: "Портретная и фэшн-фотография с талантливыми моделями",
+    },
+    close: { en: "Close", he: "סגור", ru: "Закрыть" },
+    photos: {
+      elegantPose: { en: "Elegant Pose", he: "תנוחה אלגנטית", ru: "Элегантная поза" },
+      goldenHour: { en: "Golden Hour", he: "שעת הזהב", ru: "Золотой час" },
+      urbanStyle: { en: "Urban Style", he: "סטייל עירוני", ru: "Городской стиль" },
+      naturalBeauty: { en: "Natural Beauty", he: "יופי טבעי", ru: "Природная красота" },
+      softLight: { en: "Soft Light", he: "אור רך", ru: "Мягкий свет" },
+      classicPortrait: { en: "Classic Portrait", he: "פורטרט קלאסי", ru: "Классический портрет" },
+      bohemianDream: { en: "Bohemian Dream", he: "חלום בוהמייני", ru: "Богемная мечта" },
+      timelessGrace: { en: "Timeless Grace", he: "חן נצחי", ru: "Вечная грация" },
+      autumnMood: { en: "Autumn Mood", he: "מצב רוח סתווי", ru: "Осеннее настроение" },
+    },
   },
   about: {
     title: { en: "About", he: "אודות", ru: "Обо мне" },

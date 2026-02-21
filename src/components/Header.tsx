@@ -18,6 +18,7 @@ export default function Header() {
   const navLinks = [
     { label: t(translations.nav.work, lang), href: "#portfolio" },
     { label: t(translations.nav.collections, lang), href: "#categories" },
+    { label: t(translations.nav.models, lang), href: "#models" },
     { label: t(translations.nav.about, lang), href: "#about" },
     { label: t(translations.nav.contact, lang), href: "#contact" },
   ];
