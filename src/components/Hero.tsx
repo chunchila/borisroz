@@ -6,15 +6,15 @@ import Image from "next/image";
 const heroImages = [
   {
     src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
-    alt: "Mountain landscape at golden hour",
+    alt: "Горный пейзаж в золотой час",
   },
   {
     src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1920&q=80",
-    alt: "Misty forest valley",
+    alt: "Туманная лесная долина",
   },
   {
     src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1920&q=80",
-    alt: "Serene lake reflection",
+    alt: "Отражение безмятежного озера",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Hero() {
         </div>
         <div className="animate-fade-in-up" style={{ animationDelay: "0.5s", opacity: 0 }}>
           <p className="mt-6 text-[15px] text-white/50 font-light tracking-[0.15em]">
-            Photography
+            Фотография
           </p>
         </div>
         <div className="animate-fade-in-up" style={{ animationDelay: "0.8s", opacity: 0 }}>
@@ -66,7 +66,7 @@ export default function Hero() {
             href="#portfolio"
             className="mt-16 text-[13px] text-white/40 hover:text-white/80 transition-colors duration-500 tracking-wider"
           >
-            View work &darr;
+            Смотреть работы &darr;
           </a>
         </div>
       </div>
@@ -81,7 +81,7 @@ export default function Hero() {
                 ? "w-6 h-1 bg-white/70"
                 : "w-1 h-1 bg-white/20 hover:bg-white/40"
             }`}
-            aria-label={`Go to slide ${i + 1}`}
+            aria-label={`Перейти к слайду ${i + 1}`}
           />
         ))}
       </div>

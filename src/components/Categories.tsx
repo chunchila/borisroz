@@ -5,32 +5,32 @@ import { motion } from "framer-motion";
 
 const categories = [
   {
-    name: "Landscapes",
+    name: "Пейзажи",
     count: 48,
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
   },
   {
-    name: "Portraits",
+    name: "Портреты",
     count: 32,
     image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80",
   },
   {
-    name: "Street",
+    name: "Стрит",
     count: 27,
     image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
   },
   {
-    name: "Nature",
+    name: "Природа",
     count: 56,
     image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80",
   },
   {
-    name: "Architecture",
+    name: "Архитектура",
     count: 19,
     image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80",
   },
   {
-    name: "Black & White",
+    name: "Чёрно-белое",
     count: 23,
     image: "https://images.unsplash.com/photo-1445251836269-d158eaa028a6?w=600&q=80",
   },
@@ -42,7 +42,7 @@ export default function Categories() {
       <div className="max-w-[1400px] mx-auto">
         <div className="mb-20">
           <h2 className="text-3xl md:text-4xl font-extralight tracking-[0.04em]">
-            Collections
+            Коллекции
           </h2>
         </div>
 
@@ -72,7 +72,7 @@ export default function Categories() {
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className="text-white text-sm font-light">{cat.name}</p>
-                <p className="text-white/40 text-xs mt-0.5">{cat.count} photos</p>
+                <p className="text-white/40 text-xs mt-0.5">{cat.count} фото</p>
               </div>
             </motion.div>
           ))}

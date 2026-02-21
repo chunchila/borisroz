@@ -5,10 +5,10 @@ import { Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
 const navLinks = [
-  { label: "Work", href: "#portfolio" },
-  { label: "Collections", href: "#categories" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Работы", href: "#portfolio" },
+  { label: "Коллекции", href: "#categories" },
+  { label: "Обо мне", href: "#about" },
+  { label: "Контакты", href: "#contact" },
 ];
 
 export default function Header() {
@@ -53,7 +53,7 @@ export default function Header() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-foreground/70 hover:text-foreground transition-colors"
-            aria-label="Toggle menu"
+            aria-label="Открыть меню"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>

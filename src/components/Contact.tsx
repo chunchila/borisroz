@@ -13,23 +13,23 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl font-extralight tracking-[0.04em] mb-4">
-            Get in touch
+            Связаться
           </h2>
           <p className="text-muted text-[15px] mb-14">
-            Interested in prints, collaborations, or commissioning work?
+            Интересуют принты, сотрудничество или заказная съёмка?
           </p>
 
           <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
-                <label className="text-xs text-muted block mb-2">Name</label>
+                <label className="text-xs text-muted block mb-2">Имя</label>
                 <input
                   type="text"
                   className="w-full bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-foreground/40 transition-colors duration-300 placeholder:text-transparent"
                 />
               </div>
               <div>
-                <label className="text-xs text-muted block mb-2">Email</label>
+                <label className="text-xs text-muted block mb-2">Эл. почта</label>
                 <input
                   type="email"
                   className="w-full bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-foreground/40 transition-colors duration-300 placeholder:text-transparent"
@@ -37,14 +37,14 @@ export default function Contact() {
               </div>
             </div>
             <div>
-              <label className="text-xs text-muted block mb-2">Subject</label>
+              <label className="text-xs text-muted block mb-2">Тема</label>
               <input
                 type="text"
                 className="w-full bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-foreground/40 transition-colors duration-300 placeholder:text-transparent"
               />
             </div>
             <div>
-              <label className="text-xs text-muted block mb-2">Message</label>
+              <label className="text-xs text-muted block mb-2">Сообщение</label>
               <textarea
                 rows={4}
                 className="w-full bg-transparent border-b border-border pb-3 text-sm text-foreground focus:outline-none focus:border-foreground/40 transition-colors duration-300 resize-none placeholder:text-transparent"
@@ -54,7 +54,7 @@ export default function Contact() {
               type="submit"
               className="text-[13px] text-foreground/60 hover:text-foreground border-b border-foreground/20 hover:border-foreground pb-1 transition-all duration-300"
             >
-              Send message
+              Отправить
             </button>
           </form>
         </motion.div>

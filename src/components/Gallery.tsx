@@ -8,73 +8,73 @@ import { motion, AnimatePresence } from "framer-motion";
 const photos = [
   {
     src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
-    title: "Golden Horizons",
-    category: "Landscape",
+    title: "Золотые горизонты",
+    category: "Пейзаж",
   },
   {
     src: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&q=80",
-    title: "Forest Cathedral",
-    category: "Nature",
+    title: "Лесной собор",
+    category: "Природа",
   },
   {
     src: "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?w=800&q=80",
-    title: "Ocean Dreams",
-    category: "Seascape",
+    title: "Океанские мечты",
+    category: "Морской пейзаж",
   },
   {
     src: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-    title: "Urban Geometry",
-    category: "Architecture",
+    title: "Городская геометрия",
+    category: "Архитектура",
   },
   {
     src: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80",
-    title: "Cascade Whispers",
-    category: "Nature",
+    title: "Шёпот водопада",
+    category: "Природа",
   },
   {
     src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
-    title: "Mountain Solitude",
-    category: "Landscape",
+    title: "Горное уединение",
+    category: "Пейзаж",
   },
   {
     src: "https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=800&q=80",
-    title: "Ember Skies",
-    category: "Landscape",
+    title: "Пылающие небеса",
+    category: "Пейзаж",
   },
   {
     src: "https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?w=800&q=80",
-    title: "Silent Paths",
-    category: "Nature",
+    title: "Тихие тропы",
+    category: "Природа",
   },
   {
     src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80",
-    title: "Starlit Peaks",
-    category: "Astrophotography",
+    title: "Звёздные вершины",
+    category: "Астрофотография",
   },
   {
     src: "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80",
-    title: "Verdant Valley",
-    category: "Landscape",
+    title: "Зелёная долина",
+    category: "Пейзаж",
   },
   {
     src: "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?w=800&q=80",
-    title: "Tropical Bliss",
-    category: "Seascape",
+    title: "Тропическое блаженство",
+    category: "Морской пейзаж",
   },
   {
     src: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80",
-    title: "Dawn's Embrace",
-    category: "Landscape",
+    title: "Объятия рассвета",
+    category: "Пейзаж",
   },
 ];
 
-const filters = ["All", "Landscape", "Nature", "Seascape", "Architecture", "Astrophotography"];
+const filters = ["Все", "Пейзаж", "Природа", "Морской пейзаж", "Архитектура", "Астрофотография"];
 
 export default function Gallery() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("Все");
   const [selectedPhoto, setSelectedPhoto] = useState<(typeof photos)[0] | null>(null);
 
-  const filtered = activeFilter === "All"
+  const filtered = activeFilter === "Все"
     ? photos
     : photos.filter((p) => p.category === activeFilter);
 
@@ -83,7 +83,7 @@ export default function Gallery() {
       <div className="max-w-[1400px] mx-auto">
         <div className="mb-20">
           <h2 className="text-3xl md:text-4xl font-extralight tracking-[0.04em]">
-            Selected Work
+            Избранные работы
           </h2>
         </div>
 
@@ -154,7 +154,7 @@ export default function Gallery() {
             <button
               className="absolute top-5 right-5 text-white/40 hover:text-white transition-colors z-50"
               onClick={() => setSelectedPhoto(null)}
-              aria-label="Close"
+              aria-label="Закрыть"
             >
               <X size={24} />
             </button>

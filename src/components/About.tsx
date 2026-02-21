@@ -17,7 +17,7 @@ export default function About() {
             <div className="relative aspect-[4/5] overflow-hidden bg-card">
               <Image
                 src="/images/photographer.png"
-                alt="Boris Ro - Photographer"
+                alt="Борис Ро — Фотограф"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -32,39 +32,39 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <h2 className="text-3xl md:text-4xl font-extralight tracking-[0.04em] mb-10">
-              About
+              Обо мне
             </h2>
             <div className="space-y-6 text-muted text-[15px] leading-[1.8]">
               <p>
-                With a keen eye for light and composition, borisRo captures moments
-                that transcend the ordinary. Specializing in landscape and fine art
-                photography, each image tells a unique story of our world&apos;s
-                breathtaking beauty.
+                С острым чувством света и композиции, borisRo запечатлевает моменты,
+                выходящие за рамки обыденного. Специализируясь на пейзажной
+                и художественной фотографии, каждый снимок рассказывает уникальную
+                историю о захватывающей красоте нашего мира.
               </p>
               <p>
-                From the rugged peaks of Patagonia to the serene temples of Kyoto,
-                the journey has been one of relentless pursuit of the perfect frame.
-                Every photograph is a testament to patience, passion, and an
-                unwavering commitment to the craft.
+                От суровых вершин Патагонии до безмятежных храмов Киото —
+                этот путь был неустанным стремлением к идеальному кадру.
+                Каждая фотография — это свидетельство терпения, страсти
+                и непоколебимой преданности своему делу.
               </p>
               <p>
-                Featured in National Geographic, Aperture Magazine, and exhibited
-                in galleries across New York, London, and Tokyo.
+                Публикации в National Geographic, журнале Aperture, выставки
+                в галереях Нью-Йорка, Лондона и Токио.
               </p>
             </div>
 
             <div className="flex gap-14 mt-14 pt-8 border-t border-border">
               <div>
                 <p className="text-2xl font-extralight text-foreground">12+</p>
-                <p className="text-xs text-muted mt-1">Years</p>
+                <p className="text-xs text-muted mt-1">Лет опыта</p>
               </div>
               <div>
                 <p className="text-2xl font-extralight text-foreground">85+</p>
-                <p className="text-xs text-muted mt-1">Awards</p>
+                <p className="text-xs text-muted mt-1">Наград</p>
               </div>
               <div>
                 <p className="text-2xl font-extralight text-foreground">40+</p>
-                <p className="text-xs text-muted mt-1">Countries</p>
+                <p className="text-xs text-muted mt-1">Стран</p>
               </div>
             </div>
           </motion.div>
