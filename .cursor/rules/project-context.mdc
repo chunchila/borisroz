@@ -1,0 +1,70 @@
+---
+description: borisRo photography portfolio - project context, architecture, and design decisions
+alwaysApply: true
+---
+
+# borisRo — Photography Portfolio Website
+
+## Project Overview
+
+A modern, minimal photography portfolio website for the brand **borisRo**. Built with Next.js 16, React, TypeScript, Tailwind CSS v4, and Framer Motion. Inspired by sites like GuruShots, 500px, and Aperture.
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router, `src/` directory)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4 (using `@theme inline` and CSS variables)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Images**: Unsplash (remote), local images in `public/images/`
+
+## Language
+
+All UI text is in **Russian**. The HTML lang is set to `ru`. The Inter font includes the `cyrillic` subset.
+
+## Project Structure
+
+```
+src/
+  app/
+    layout.tsx       — Root layout, Inter font (latin + cyrillic), metadata in Russian
+    page.tsx         — Main page composing all sections
+    globals.css      — Tailwind imports, CSS variables, animations
+  components/
+    Logo.tsx         — Pure text wordmark "borisRo" (no SVG icon)
+    Header.tsx       — Fixed header, blur on scroll, mobile menu. Nav: Работы, Коллекции, Обо мне, Контакты
+    Hero.tsx         — Full-screen image slideshow (3 Unsplash images, 7s interval), "borisro" + "Фотография"
+    Gallery.tsx      — Photo grid (3 cols), category filters (Все/Пейзаж/Природа/etc.), lightbox on click
+    Categories.tsx   — 6 collection cards in 3-col grid with image overlays
+    About.tsx        — Photographer photo (public/images/photographer.png) + bio + stats
+    Contact.tsx      — Form with bottom-border inputs: Имя, Эл. почта, Тема, Сообщение
+    Footer.tsx       — Minimal: copyright left, social links right
+public/
+  images/
+    photographer.png — Photographer's personal portrait photo
+```
+
+## Design System
+
+- **Theme**: Dark (bg `#090909`, text `#e8e8e8`)
+- **Color palette**: Monochromatic — whites and grays on near-black. No accent colors.
+- **Typography**: Inter font, extralight (200) for headings, light/normal for body
+- **Layout**: Max width 1400px, 1px gaps between grid items
+- **Hover states**: Subtle scale (1.03) + dark overlay on images
+- **Animations**: Framer Motion for scroll reveals and filter transitions, CSS for hero fade-in
+- **Scrollbar**: 4px thin, dark, transparent track
+- **Approach**: Minimal — no decorative elements, no borders on sections, no icons in stats
+
+## Key Design Decisions
+
+1. Logo is typography-only: "borisRo" with weight contrast (light vs medium)
+2. Gallery uses uniform 4:3 aspect ratio grid (not masonry)
+3. Category filters are rounded pills (white active, gray inactive)
+4. Contact form uses bottom-border-only inputs with small labels above
+5. Footer is a single horizontal line (copyright + social links)
+6. No gold/accent colors — pure monochrome for a gallery-like feel
+7. Image sources: Unsplash for portfolio/hero, local file for photographer portrait
+
+## External Image Domains
+
+Configured in `next.config.ts`: `images.unsplash.com`, `plus.unsplash.com`

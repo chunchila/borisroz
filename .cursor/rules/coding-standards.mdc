@@ -1,0 +1,33 @@
+---
+description: Coding standards for borisRo Next.js project
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Coding Standards
+
+## Components
+
+- All components use `"use client"` directive (animations and interactivity require it)
+- Functional components with default exports
+- Image component from `next/image` for all images (with proper `sizes` prop)
+- Framer Motion for scroll-triggered animations (`whileInView` with `viewport={{ once: true }}`)
+
+## Styling
+
+- Tailwind CSS v4 with CSS variables defined in `globals.css` using `@theme inline`
+- Custom colors referenced as `text-foreground`, `text-muted`, `bg-card`, `border-border`, etc.
+- No inline styles except for animation delays
+- Responsive: mobile-first with `sm:`, `md:`, `lg:` breakpoints
+
+## Framer Motion
+
+- Use `as const` for ease values in variants to satisfy TypeScript (e.g., `ease: "easeOut" as const`)
+- `AnimatePresence` with `mode="popLayout"` for filter transitions
+- Keep animation durations subtle: 0.2-0.6s range
+
+## Content Language
+
+- All user-facing text must be in **Russian**
+- Brand name "borisRo" stays in Latin script
+- Alt text for images should be in Russian
