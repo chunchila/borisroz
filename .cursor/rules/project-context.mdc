@@ -16,29 +16,47 @@ A modern, minimal photography portfolio website for the brand **borisRo**. Built
 - **Styling**: Tailwind CSS v4 (using `@theme inline` and CSS variables)
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
+- **Fonts**: Inter (latin, cyrillic), Heebo (hebrew)
 - **Images**: Unsplash (remote), local images in `public/images/`
 
-## Language
+## Multi-Language Support (i18n)
 
-All UI text is in **Russian**. The HTML lang is set to `ru`. The Inter font includes the `cyrillic` subset.
+Three languages: **English (en)**, **Hebrew (he)**, **Russian (ru)**
+- Translations defined in `src/lib/translations.ts` as a flat object keyed by section
+- `t()` helper function takes a translation key record and a Lang
+- Hebrew triggers RTL layout via `document.documentElement.dir = "rtl"`
+- Uses CSS logical properties (`ms-`, `me-`, `start`, `end`) for RTL compatibility
+- Language persisted in `localStorage` as `borisro-lang`
+- Heebo font used for Hebrew, Inter for English/Russian
+
+## Theme Support
+
+Two themes: **dark** and **light**
+- Controlled via `data-theme` attribute on `<html>`
+- CSS variables switch automatically between themes in `globals.css`
+- Theme persisted in `localStorage` as `borisro-theme`
+- Dark is default
 
 ## Project Structure
 
 ```
 src/
   app/
-    layout.tsx       — Root layout, Inter font (latin + cyrillic), metadata in Russian
+    layout.tsx       — Root layout, Inter + Heebo fonts, AppProvider wrapper
     page.tsx         — Main page composing all sections
-    globals.css      — Tailwind imports, CSS variables, animations
+    globals.css      — Tailwind imports, CSS variables for both themes, animations
+  lib/
+    translations.ts  — All translations (EN/HE/RU), t() helper, isRTL()
+    context.tsx      — AppProvider with lang/theme state, localStorage persistence, dir/lang attributes
   components/
     Logo.tsx         — Pure text wordmark "borisRo" (no SVG icon)
-    Header.tsx       — Fixed header, blur on scroll, mobile menu. Nav: Работы, Коллекции, Обо мне, Контакты
-    Hero.tsx         — Full-screen image slideshow (3 Unsplash images, 7s interval), "borisro" + "Фотография"
-    Gallery.tsx      — Photo grid (3 cols), category filters (Все/Пейзаж/Природа/etc.), lightbox on click
-    Categories.tsx   — 6 collection cards in 3-col grid with image overlays
-    About.tsx        — Photographer photo (public/images/photographer.png) + bio + stats
-    Contact.tsx      — Form with bottom-border inputs: Имя, Эл. почта, Тема, Сообщение
-    Footer.tsx       — Minimal: copyright left, social links right
+    Header.tsx       — Fixed header, blur on scroll, mobile menu, language selector (Globe + dropdown on desktop, pill buttons on mobile), theme toggle (Sun/Moon)
+    Hero.tsx         — Full-screen image slideshow, translated subtitle + CTA
+    Gallery.tsx      — Photo grid, translated filters/titles/categories, lightbox
+    Categories.tsx   — 6 collection cards with translated names
+    About.tsx        — Photographer photo + translated bio + stats
+    Contact.tsx      — Translated form labels + button
+    Footer.tsx       — Translated copyright
 public/
   images/
     photographer.png — Photographer's personal portrait photo
@@ -46,24 +64,13 @@ public/
 
 ## Design System
 
-- **Theme**: Dark (bg `#090909`, text `#e8e8e8`)
-- **Color palette**: Monochromatic — whites and grays on near-black. No accent colors.
-- **Typography**: Inter font, extralight (200) for headings, light/normal for body
-- **Layout**: Max width 1400px, 1px gaps between grid items
+- **Dark theme**: bg `#090909`, text `#e8e8e8`, card `#111111`
+- **Light theme**: bg `#fafafa`, text `#1a1a1a`, card `#f0f0f0`
+- **Color palette**: Monochromatic — no accent colors
+- **Typography**: Inter (200-700), Heebo for Hebrew
+- **Layout**: Max width 1400px, 1px gaps between grid items, CSS logical properties for RTL
 - **Hover states**: Subtle scale (1.03) + dark overlay on images
-- **Animations**: Framer Motion for scroll reveals and filter transitions, CSS for hero fade-in
-- **Scrollbar**: 4px thin, dark, transparent track
-- **Approach**: Minimal — no decorative elements, no borders on sections, no icons in stats
-
-## Key Design Decisions
-
-1. Logo is typography-only: "borisRo" with weight contrast (light vs medium)
-2. Gallery uses uniform 4:3 aspect ratio grid (not masonry)
-3. Category filters are rounded pills (white active, gray inactive)
-4. Contact form uses bottom-border-only inputs with small labels above
-5. Footer is a single horizontal line (copyright + social links)
-6. No gold/accent colors — pure monochrome for a gallery-like feel
-7. Image sources: Unsplash for portfolio/hero, local file for photographer portrait
+- **Transitions**: Background/color transitions on theme switch (0.3s)
 
 ## External Image Domains
 

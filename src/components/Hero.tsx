@@ -2,23 +2,26 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useApp } from "@/lib/context";
+import { translations, t } from "@/lib/translations";
 
 const heroImages = [
   {
     src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
-    alt: "Горный пейзаж в золотой час",
+    alt: "Mountain landscape",
   },
   {
     src: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1920&q=80",
-    alt: "Туманная лесная долина",
+    alt: "Misty forest valley",
   },
   {
     src: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1920&q=80",
-    alt: "Отражение безмятежного озера",
+    alt: "Serene lake reflection",
   },
 ];
 
 export default function Hero() {
+  const { lang } = useApp();
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -58,7 +61,7 @@ export default function Hero() {
         </div>
         <div className="animate-fade-in-up" style={{ animationDelay: "0.5s", opacity: 0 }}>
           <p className="mt-6 text-[15px] text-white/50 font-light tracking-[0.15em]">
-            Фотография
+            {t(translations.hero.subtitle, lang)}
           </p>
         </div>
         <div className="animate-fade-in-up" style={{ animationDelay: "0.8s", opacity: 0 }}>
@@ -66,7 +69,7 @@ export default function Hero() {
             href="#portfolio"
             className="mt-16 text-[13px] text-white/40 hover:text-white/80 transition-colors duration-500 tracking-wider"
           >
-            Смотреть работы &darr;
+            {t(translations.hero.cta, lang)} &darr;
           </a>
         </div>
       </div>
@@ -81,7 +84,7 @@ export default function Hero() {
                 ? "w-6 h-1 bg-white/70"
                 : "w-1 h-1 bg-white/20 hover:bg-white/40"
             }`}
-            aria-label={`Перейти к слайду ${i + 1}`}
+            aria-label={`Slide ${i + 1}`}
           />
         ))}
       </div>

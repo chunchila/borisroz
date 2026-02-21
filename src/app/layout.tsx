@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Heebo } from "next/font/google";
 import "./globals.css";
+import { AppProvider } from "@/lib/context";
 
 const inter = Inter({
-  variable: "--font-geist-sans",
-  subsets: ["latin", "cyrillic"],
+  variable: "--font-inter",
+  subsets: ["latin", "cyrillic", "latin-ext"],
+  weight: ["200", "300", "400", "500", "600", "700"],
+});
+
+const heebo = Heebo({
+  variable: "--font-heebo",
+  subsets: ["latin", "hebrew"],
   weight: ["200", "300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "borisRo | Художественная фотография",
+  title: "borisRo | Photography",
   description:
-    "Визуальные истории через художественную фотографию. Запечатлевая необыкновенное в каждом кадре.",
-  keywords: ["фотография", "художественная фотография", "пейзаж", "портфолио", "borisRo"],
+    "Visual storytelling through fine art photography. Capturing the extraordinary in every frame.",
+  keywords: ["photography", "fine art", "landscape", "portfolio", "borisRo"],
 };
 
 export default function RootLayout({
@@ -21,9 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <body className={`${inter.variable} antialiased font-sans`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${heebo.variable} antialiased`}>
+        <AppProvider>{children}</AppProvider>
       </body>
     </html>
   );

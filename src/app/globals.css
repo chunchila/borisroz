@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-:root {
+:root,
+[data-theme="dark"] {
   --background: #090909;
   --foreground: #e8e8e8;
   --accent: #a0a0a0;
@@ -8,6 +9,30 @@
   --muted: #555555;
   --card: #111111;
   --border: #1a1a1a;
+  --overlay: rgba(0, 0, 0, 0.40);
+  --filter-bg: #ffffff;
+  --filter-text: #000000;
+  --input-focus: rgba(255, 255, 255, 0.4);
+  --selection-bg: rgba(255, 255, 255, 0.15);
+  --selection-color: #ffffff;
+  --scrollbar-thumb: #222;
+}
+
+[data-theme="light"] {
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --accent: #666666;
+  --accent-hover: #000000;
+  --muted: #888888;
+  --card: #f0f0f0;
+  --border: #e0e0e0;
+  --overlay: rgba(0, 0, 0, 0.25);
+  --filter-bg: #1a1a1a;
+  --filter-text: #ffffff;
+  --input-focus: rgba(0, 0, 0, 0.4);
+  --selection-bg: rgba(0, 0, 0, 0.12);
+  --selection-color: #000000;
+  --scrollbar-thumb: #ccc;
 }
 
 @theme inline {
@@ -18,16 +43,20 @@
   --color-muted: var(--muted);
   --color-card: var(--card);
   --color-border: var(--border);
-  --font-sans: var(--font-geist-sans);
+  --color-overlay: var(--overlay);
+  --color-filter-bg: var(--filter-bg);
+  --color-filter-text: var(--filter-text);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 html {
@@ -35,8 +64,8 @@ html {
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  background: var(--selection-bg);
+  color: var(--selection-color);
 }
 
 ::-webkit-scrollbar {
@@ -48,7 +77,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background: var(--scrollbar-thumb);
   border-radius: 2px;
 }
 
@@ -65,4 +94,8 @@ html {
 
 .animate-fade-in-up {
   animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-heebo), var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
 }
