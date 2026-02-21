@@ -16,10 +16,10 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: "borisRo | Photography",
+  title: "borisRozin | Photography",
   description:
     "Visual storytelling through fine art photography. Capturing the extraordinary in every frame.",
-  keywords: ["photography", "fine art", "landscape", "portfolio", "borisRo"],
+  keywords: ["photography", "fine art", "landscape", "portfolio", "borisRozin"],
 };
 
 export default function RootLayout({

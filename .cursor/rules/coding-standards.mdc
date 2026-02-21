@@ -1,5 +1,5 @@
 ---
-description: Coding standards for borisRo Next.js project
+description: Coding standards for borisRozin Next.js project
 globs: src/**/*.{ts,tsx}
 alwaysApply: false
 ---
@@ -29,5 +29,5 @@ alwaysApply: false
 ## Content Language
 
 - All user-facing text must be in **Russian**
-- Brand name "borisRo" stays in Latin script
+- Brand name "borisRozin" stays in Latin script
 - Alt text for images should be in Russian

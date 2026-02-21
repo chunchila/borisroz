@@ -17,7 +17,7 @@ export default function Footer() {
     <footer className="py-12 px-6 lg:px-10">
       <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <p className="text-xs text-muted/50">
-          &copy; {new Date().getFullYear()} borisRo. {t(translations.footer.rights, lang)}
+          &copy; {new Date().getFullYear()} borisRozin. {t(translations.footer.rights, lang)}
         </p>
 
         <div className="flex items-center gap-6">

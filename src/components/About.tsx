@@ -21,7 +21,7 @@ export default function About() {
             <div className="relative aspect-[4/5] overflow-hidden bg-card">
               <Image
                 src="/images/photographer.png"
-                alt="Boris Ro"
+                alt="Boris Rozin"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 50vw"

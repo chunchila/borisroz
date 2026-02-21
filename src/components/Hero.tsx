@@ -56,7 +56,7 @@ export default function Hero() {
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
         <div className="animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-[0.08em] text-white/90 lowercase">
-            boris<span className="font-normal">Ro</span>
+            boris<span className="font-normal">Rozin</span>
           </h1>
         </div>
         <div className="animate-fade-in-up" style={{ animationDelay: "0.5s", opacity: 0 }}>

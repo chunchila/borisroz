@@ -1,13 +1,13 @@
 ---
-description: borisRo photography portfolio - project context, architecture, and design decisions
+description: borisRozin photography portfolio - project context, architecture, and design decisions
 alwaysApply: true
 ---
 
-# borisRo — Photography Portfolio Website
+# borisRozin — Photography Portfolio Website
 
 ## Project Overview
 
-A modern, minimal photography portfolio website for the brand **borisRo**. Built with Next.js 16, React, TypeScript, Tailwind CSS v4, and Framer Motion. Inspired by sites like GuruShots, 500px, and Aperture.
+A modern, minimal photography portfolio website for the brand **borisRozin**. Built with Next.js 16, React, TypeScript, Tailwind CSS v4, and Framer Motion. Inspired by sites like GuruShots, 500px, and Aperture.
 
 ## Tech Stack
 
@@ -26,7 +26,7 @@ Three languages: **English (en)**, **Hebrew (he)**, **Russian (ru)**
 - `t()` helper function takes a translation key record and a Lang
 - Hebrew triggers RTL layout via `document.documentElement.dir = "rtl"`
 - Uses CSS logical properties (`ms-`, `me-`, `start`, `end`) for RTL compatibility
-- Language persisted in `localStorage` as `borisro-lang`
+- Language persisted in `localStorage` as `borisrozin-lang`
 - Heebo font used for Hebrew, Inter for English/Russian
 
 ## Theme Support
@@ -34,7 +34,7 @@ Three languages: **English (en)**, **Hebrew (he)**, **Russian (ru)**
 Two themes: **dark** and **light**
 - Controlled via `data-theme` attribute on `<html>`
 - CSS variables switch automatically between themes in `globals.css`
-- Theme persisted in `localStorage` as `borisro-theme`
+- Theme persisted in `localStorage` as `borisrozin-theme`
 - Dark is default
 
 ## Project Structure
@@ -49,7 +49,7 @@ src/
     translations.ts  — All translations (EN/HE/RU), t() helper, isRTL()
     context.tsx      — AppProvider with lang/theme state, localStorage persistence, dir/lang attributes
   components/
-    Logo.tsx         — Pure text wordmark "borisRo" (no SVG icon)
+    Logo.tsx         — Pure text wordmark "borisRozin" (no SVG icon)
     Header.tsx       — Fixed header, blur on scroll, mobile menu, language selector (Globe + dropdown on desktop, pill buttons on mobile), theme toggle (Sun/Moon)
     Hero.tsx         — Full-screen image slideshow, translated subtitle + CTA
     Gallery.tsx      — Photo grid, translated filters/titles/categories, lightbox

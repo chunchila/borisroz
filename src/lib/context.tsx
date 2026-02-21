@@ -20,8 +20,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>("dark");
 
   useEffect(() => {
-    const savedLang = localStorage.getItem("borisro-lang") as Lang | null;
-    const savedTheme = localStorage.getItem("borisro-theme") as Theme | null;
+    const savedLang = localStorage.getItem("borisrozin-lang") as Lang | null;
+    const savedTheme = localStorage.getItem("borisrozin-theme") as Theme | null;
     if (savedLang && ["en", "he", "ru"].includes(savedLang)) setLangState(savedLang);
     if (savedTheme && ["dark", "light"].includes(savedTheme)) setThemeState(savedTheme);
   }, []);
@@ -37,12 +37,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const setLang = (l: Lang) => {
     setLangState(l);
-    localStorage.setItem("borisro-lang", l);
+    localStorage.setItem("borisrozin-lang", l);
   };
 
   const setTheme = (t: Theme) => {
     setThemeState(t);
-    localStorage.setItem("borisro-theme", t);
+    localStorage.setItem("borisrozin-theme", t);
   };
 
   return (

@@ -48,9 +48,9 @@ export const translations = {
   about: {
     title: { en: "About", he: "אודות", ru: "Обо мне" },
     bio1: {
-      en: "With a keen eye for light and composition, borisRo captures moments that transcend the ordinary. Specializing in landscape and fine art photography, each image tells a unique story of our world's breathtaking beauty.",
-      he: "עם עין חדה לאור ולקומפוזיציה, borisRo לוכד רגעים שחורגים מהרגיל. בהתמחות בצילום נוף ואמנות, כל תמונה מספרת סיפור ייחודי על היופי עוצר הנשימה של עולמנו.",
-      ru: "С острым чувством света и композиции, borisRo запечатлевает моменты, выходящие за рамки обыденного. Специализируясь на пейзажной и художественной фотографии, каждый снимок рассказывает уникальную историю о захватывающей красоте нашего мира.",
+      en: "With a keen eye for light and composition, borisRozin captures moments that transcend the ordinary. Specializing in landscape and fine art photography, each image tells a unique story of our world's breathtaking beauty.",
+      he: "עם עין חדה לאור ולקומפוזיציה, borisRozin לוכד רגעים שחורגים מהרגיל. בהתמחות בצילום נוף ואמנות, כל תמונה מספרת סיפור ייחודי על היופי עוצר הנשימה של עולמנו.",
+      ru: "С острым чувством света и композиции, borisRozin запечатлевает моменты, выходящие за рамки обыденного. Специализируясь на пейзажной и художественной фотографии, каждый снимок рассказывает уникальную историю о захватывающей красоте нашего мира.",
     },
     bio2: {
       en: "From the rugged peaks of Patagonia to the serene temples of Kyoto, the journey has been one of relentless pursuit of the perfect frame. Every photograph is a testament to patience, passion, and an unwavering commitment to the craft.",
