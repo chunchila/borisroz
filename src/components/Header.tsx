@@ -96,13 +96,26 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-2 md:hidden">
+            <div className="flex items-center gap-0.5">
+              {langOrder.map((l) => (
+                <button
+                  key={l}
+                  onClick={() => setLang(l)}
+                  className={`text-[11px] px-2 py-1 rounded-full transition-colors ${
+                    l === lang ? "bg-filter-bg text-filter-text" : "text-muted"
+                  }`}
+                >
+                  {langLabels[l]}
+                </button>
+              ))}
+            </div>
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-1.5 text-foreground/70 hover:text-foreground transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
             </button>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -139,20 +152,6 @@ export default function Header() {
           </a>
         ))}
 
-        {/* Mobile language switcher */}
-        <div className="flex gap-4 mt-4" style={{ opacity: mobileOpen ? 1 : 0, transition: "opacity 0.3s 0.3s" }}>
-          {langOrder.map((l) => (
-            <button
-              key={l}
-              onClick={() => { setLang(l); setMobileOpen(false); }}
-              className={`text-sm px-3 py-1 rounded-full transition-colors ${
-                l === lang ? "bg-filter-bg text-filter-text" : "text-muted hover:text-foreground"
-              }`}
-            >
-              {l === "en" ? "EN" : l === "he" ? "עב" : "РУ"}
-            </button>
-          ))}
-        </div>
       </div>
     </>
   );
