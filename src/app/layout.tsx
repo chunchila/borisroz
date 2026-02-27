@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Heebo } from "next/font/google";
 import "./globals.css";
 import { AppProvider } from "@/lib/context";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${heebo.variable} antialiased`}>
         <AppProvider>{children}</AppProvider>
+        <Analytics />
       </body>
     </html>
   );
